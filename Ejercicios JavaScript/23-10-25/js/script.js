@@ -93,3 +93,46 @@ function ejercicio10(){
     document.getElementById('array2').innerHTML = '['+numeros.join(', ')+']'
     document.getElementById('resultado10').innerHTML = 'La suma de los elemntos es ' + suma;
 }
+
+//Ejercicio 11
+function ejercicio11() {
+  let persona = {
+    nombre: "David",
+    edad: 20,
+    ciudad: "Asunción"
+  };
+
+  console.log("Nombre:", persona.nombre);
+  console.log("Edad:", persona.edad);
+  console.log("Ciudad:", persona.ciudad);
+
+  console.log("Objeto completo:", persona);
+}
+
+
+//Ejercicio 12
+function ejercicio12() {
+
+  function evaluarEstudiante(estudiante) {
+    if (estudiante.calificacion >= 60) {
+      return estudiante.nombre + " ha aprobado ✅";
+    } else {
+      return estudiante.nombre + " no ha aprobado ❌";
+    }
+  }
+
+  let estudiante1 = {
+    nombre: "Ana",
+    calificacion: 75
+  };
+
+  let estudiante2 = {
+    nombre: "Luis",
+    calificacion: 55
+  };
+
+  // Mostramos los resultados en consola
+  console.log("Ejercicio 12:");
+  console.log(evaluarEstudiante(estudiante1));
+  console.log(evaluarEstudiante(estudiante2));
+}
