@@ -96,28 +96,35 @@ function ejercicio10(){
 
 //Ejercicio 11
 function ejercicio11() {
-  let persona = {
-    nombre: "David",
-    edad: 20,
-    ciudad: "Asunción"
-  };
+    let persona = {
+        nombre: "David",
+        edad: 20,
+        ciudad: "Asunción"
+    };
 
-  console.log("Nombre:", persona.nombre);
-  console.log("Edad:", persona.edad);
-  console.log("Ciudad:", persona.ciudad);
+    console.log("Nombre:", persona.nombre);
+    console.log("Edad:", persona.edad);
+    console.log("Ciudad:", persona.ciudad);
 
-  console.log("Objeto completo:", persona);
+    console.log("Objeto completo:", persona);
 }
 
 
 //Ejercicio 12
 function ejercicio12() {
+    var nombreEstudiante = document.getElementById('estudianteNombre1').value;
+    var notaEstudiante = document.getElementById('notaEstudiante').value;
 
-  function evaluarEstudiante(estudiante) {
+    if (notaEstudiante>=60){
+        console.log("El estudiante "+nombreEstudiante+" ha aprobado ✅")
+    }else{
+        console.log("El estudiante "+nombreEstudiante+" NO ha aprobado ❌")
+    }
+  /*function evaluarEstudiante(estudiante) {
     if (estudiante.calificacion >= 60) {
-      return estudiante.nombre + " ha aprobado ✅";
+      return estudiante.nombre + " ha aprobado ";
     } else {
-      return estudiante.nombre + " no ha aprobado ❌";
+      return estudiante.nombre + " no ha aprobado ";
     }
   }
 
@@ -134,5 +141,5 @@ function ejercicio12() {
   // Mostramos los resultados en consola
   console.log("Ejercicio 12:");
   console.log(evaluarEstudiante(estudiante1));
-  console.log(evaluarEstudiante(estudiante2));
+  console.log(evaluarEstudiante(estudiante2));*/
 }
