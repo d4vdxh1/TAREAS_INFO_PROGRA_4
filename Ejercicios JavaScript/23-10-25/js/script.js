@@ -82,3 +82,14 @@ function ejercicio9(){
     document.getElementById('array').innerHTML = '[' + frutas.join(', ') + ']';
     document.getElementById('resultado9').innerHTML = 'Primer elemento: '+primero+' | Ultimo elemento: '+ultimo;
 }
+
+//Ejercicio 10
+function ejercicio10(){
+    let numeros = [20,30,10,40,50,90,70,80,60];
+    var suma = 0;
+    for (let i =0;i<numeros.length;i++){
+        suma += parseInt(numeros[i]);
+    }
+    document.getElementById('array').innerHTML = '['+numeros.join(',')+']'
+    document.getElementById('resultado10').innerHTML = 'La suma de los elemntos es ' + suma;
+}
