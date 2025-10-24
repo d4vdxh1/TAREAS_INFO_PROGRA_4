@@ -90,6 +90,6 @@ function ejercicio10(){
     for (let i =0;i<numeros.length;i++){
         suma += parseInt(numeros[i]);
     }
-    document.getElementById('array').innerHTML = '['+numeros.join(',')+']'
+    document.getElementById('array2').innerHTML = '['+numeros.join(',')+']'
     document.getElementById('resultado10').innerHTML = 'La suma de los elemntos es ' + suma;
 }
