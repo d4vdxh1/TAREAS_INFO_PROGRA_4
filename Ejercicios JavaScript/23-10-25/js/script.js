@@ -117,29 +117,10 @@ function ejercicio12() {
 
     if (notaEstudiante>=60){
         console.log("El estudiante "+nombreEstudiante+" ha aprobado ✅")
+        document.getElementById('resultado12').innerHTML = 'El estudiante '+nombreEstudiante+'ha aprobado ✅';
+        
     }else{
         console.log("El estudiante "+nombreEstudiante+" NO ha aprobado ❌")
+        document.getElementById('resultado12').innerHTML = "El estudiante "+nombreEstudiante+" NO ha aprobado ❌";
     }
-  /*function evaluarEstudiante(estudiante) {
-    if (estudiante.calificacion >= 60) {
-      return estudiante.nombre + " ha aprobado ";
-    } else {
-      return estudiante.nombre + " no ha aprobado ";
-    }
-  }
-
-  let estudiante1 = {
-    nombre: "Ana",
-    calificacion: 75
-  };
-
-  let estudiante2 = {
-    nombre: "Luis",
-    calificacion: 55
-  };
-
-  // Mostramos los resultados en consola
-  console.log("Ejercicio 12:");
-  console.log(evaluarEstudiante(estudiante1));
-  console.log(evaluarEstudiante(estudiante2));*/
 }
