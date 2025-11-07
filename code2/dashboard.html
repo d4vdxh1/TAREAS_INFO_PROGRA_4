@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEKO PORÂ - Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="dashboard.html">
+                <svg width="40" height="40" viewBox="0 0 60 60" class="me-2">
+                    <rect x="22" y="5" width="16" height="50" rx="3" fill="#5DADE2"/>
+                    <rect x="5" y="22" width="50" height="16" rx="3" fill="#5DADE2"/>
+                </svg>
+                <div>
+                    <strong class="d-block">HEKO PORÂ</strong>
+                    <small class="text-muted">consultorio Médico</small>
+                </div>
+            </a>
+            <div class="ms-auto d-flex align-items-center">
+                <span class="me-3">Usuario Admin</span>
+                <a href="index.html" class="btn btn-outline-secondary btn-sm">Salir</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+                <div class="position-sticky pt-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="dashboard.html">
+                                <span class="me-2">📊</span> Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/pacientes/listado.html">
+                                <span class="me-2">👥</span> Pacientes
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/medicos/listado.html">
+                                <span class="me-2">👨‍⚕️</span> Médicos
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/especialidades/listado.html">
+                                <span class="me-2">🏥</span> Especialidades
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/turnos/listado.html">
+                                <span class="me-2">📅</span> Turnos
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/atenciones/listado.html">
+                                <span class="me-2">📋</span> Atenciones Médicas
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Bienvenido al Sistema</h1>
+                </div>
+
+                <div class="row g-4 mb-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card stats-card">
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2 text-muted">Pacientes</h6>
+                                <h2 class="card-title mb-0">20</h2>
+                                <small class="text-success">Totales</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card stats-card">
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2 text-muted">Médicos</h6>
+                                <h2 class="card-title mb-0">5</h2>
+                                <small class="text-info">Activos</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card stats-card">
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2 text-muted">Turnos Hoy</h6>
+                                <h2 class="card-title mb-0">12</h2>
+                                <small class="text-warning">Pendientes</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card stats-card">
+                            <div class="card-body">
+                                <h6 class="card-subtitle mb-2 text-muted">Especialidad TOP</h6>
+                                <h2 class="card-title mb-0" style="font-size: 1.2rem;">Odontología</h2>
+                                <small class="text-primary">Más solicitada</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header bg-white">
+                        <h5 class="mb-0">Módulos del Sistema</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-md-6 col-lg-4">
+                                <a href="pages/pacientes/listado.html" class="module-card">
+                                    <span class="module-icon">👥</span>
+                                    <h5>Pacientes</h5>
+                                    <p class="text-muted mb-0">Gestión de pacientes</p>
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <a href="pages/especialidades/listado.html" class="module-card">
+                                    <span class="module-icon">🏥</span>
+                                    <h5>Especialidades</h5>
+                                    <p class="text-muted mb-0">Áreas médicas</p>
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <a href="pages/turnos/listado.html" class="module-card">
+                                    <span class="module-icon">📅</span>
+                                    <h5>Atenciones Médicas</h5>
+                                    <p class="text-muted mb-0">Reserva de turnos</p>
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <a href="pages/medicos/listado.html" class="module-card">
+                                    <span class="module-icon">👨‍⚕️</span>
+                                    <h5>Médicos</h5>
+                                    <p class="text-muted mb-0">Profesionales</p>
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <a href="pages/turnos/listado.html" class="module-card">
+                                    <span class="module-icon">🕐</span>
+                                    <h5>Turnos</h5>
+                                    <p class="text-muted mb-0">Agenda de citas</p>
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <a href="pages/atenciones/listado.html" class="module-card">
+                                    <span class="module-icon">📋</span>
+                                    <h5>Atencioneros</h5>
+                                    <p class="text-muted mb-0">Registro de atenciones</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
