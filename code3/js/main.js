@@ -100,12 +100,10 @@ function initializeMobileMenu() {
     const toggleBtn = document.getElementById('mobileMenuToggle');
     if (toggleBtn) {
         toggleBtn.addEventListener('click', function() {
-            const isOpening = !sidebar.classList.contains('mobile-open');
-            
             sidebar.classList.toggle('mobile-open');
             mobileOverlay.classList.toggle('active');
             toggleBtn.classList.toggle('active'); // ← AGREGAR
-        }); 
+        });
     }
     
     // Cerrar menú al hacer clic en el overlay
@@ -113,7 +111,7 @@ function initializeMobileMenu() {
         mobileOverlay.addEventListener('click', function() {
             sidebar.classList.remove('mobile-open');
             mobileOverlay.classList.remove('active');
-            toggleBtn.classList.remove('active');
+            toggleBtn.classList.remove('active'); // ← AGREGAR
         });
     }
     
@@ -124,7 +122,7 @@ function initializeMobileMenu() {
             if (window.innerWidth <= 768) {
                 sidebar.classList.remove('mobile-open');
                 mobileOverlay.classList.remove('active');
-                toggleBtn.classList.remove('active');
+                toggleBtn.classList.remove('active'); // ← AGREGAR
             }
         });
     });
