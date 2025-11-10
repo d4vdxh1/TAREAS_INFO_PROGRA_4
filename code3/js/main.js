@@ -100,9 +100,18 @@ function initializeMobileMenu() {
     const toggleBtn = document.getElementById('mobileMenuToggle');
     if (toggleBtn) {
         toggleBtn.addEventListener('click', function() {
+            const isOpening = !sidebar.classList.contains('mobile-open');
+            
             sidebar.classList.toggle('mobile-open');
             mobileOverlay.classList.toggle('active');
-            toggleBtn.classList.toggle('active'); // ← AGREGAR
+            toggleBtn.classList.toggle('active');
+            
+            // Cambiar el ícono
+            if (isOpening) {
+                console.log('Menú abierto - Mostrando X');
+            } else {
+                console.log('Menú cerrado - Mostrando hamburguesa');
+            }
         });
     }
     
@@ -111,7 +120,7 @@ function initializeMobileMenu() {
         mobileOverlay.addEventListener('click', function() {
             sidebar.classList.remove('mobile-open');
             mobileOverlay.classList.remove('active');
-            toggleBtn.classList.remove('active'); // ← AGREGAR
+            toggleBtn.classList.remove('active');
         });
     }
     
@@ -122,14 +131,14 @@ function initializeMobileMenu() {
             if (window.innerWidth <= 768) {
                 sidebar.classList.remove('mobile-open');
                 mobileOverlay.classList.remove('active');
-                toggleBtn.classList.remove('active'); // ← AGREGAR
+                toggleBtn.classList.remove('active');
             }
         });
     });
 }
 
 function createMobileMenuElements() {
-    // Crear botón hamburguesa CON AMBOS ÍCONOS
+    // Crear botón hamburguesa con ambos íconos
     const toggleBtn = document.createElement('button');
     toggleBtn.id = 'mobileMenuToggle';
     toggleBtn.className = 'mobile-menu-toggle';
