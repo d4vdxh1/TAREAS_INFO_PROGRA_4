@@ -104,15 +104,8 @@ function initializeMobileMenu() {
             
             sidebar.classList.toggle('mobile-open');
             mobileOverlay.classList.toggle('active');
-            toggleBtn.classList.toggle('active');
-            
-            // Cambiar el ícono
-            if (isOpening) {
-                console.log('Menú abierto - Mostrando X');
-            } else {
-                console.log('Menú cerrado - Mostrando hamburguesa');
-            }
-        });
+            toggleBtn.classList.toggle('active'); // ← AGREGAR
+        }); 
     }
     
     // Cerrar menú al hacer clic en el overlay
