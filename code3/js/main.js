@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl);
     });
-    initializeMobileMenu();
 });
 
 // Funciones de utilidad
@@ -86,9 +85,9 @@ function validateRequiredFields(form) {
 
 
 // Manejo del menú hamburguesa para móviles
-/*document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
     initializeMobileMenu();
-});*/
+});
 
 function initializeMobileMenu() {
     const mobileToggle = document.getElementById('mobileMenuToggle');
