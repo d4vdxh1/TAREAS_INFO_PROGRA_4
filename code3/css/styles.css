@@ -1,0 +1,77 @@
+:root {
+    --primary: #6b8cbc;           /* Azul más suave */
+    --primary-dark: #5a7aa8;      /* Azul oscuro más suave */
+    --secondary: #8fb0d6;         /* Azul secundario más claro */
+    --accent: #70c1b3;            /* Verde azulado suave */
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --success: #28a745;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --gray: #6c757d;
+    --light-gray: #e9ecef;
+}
+
+/* Header mejorado */
+.header {
+    background: white;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);  /* Sombra más suave */
+    padding: 20px 30px;                       /* Más padding */
+    margin: 15px 15px 0 15px;                 /* Separación de los bordes */
+    border-radius: 12px;                      /* Esquinas redondeadas */
+}
+
+/* Sidebar con colores más suaves */
+.sidebar {
+    background: linear-gradient(180deg, #7d9bc0 0%, #6a87ad 100%); /* Gradiente suave */
+    color: white;
+    min-height: 100vh;
+    box-shadow: 2px 0 15px rgba(0,0,0,0.08);  /* Sombra más suave */
+}
+
+.sidebar .logo {
+    padding: 25px 20px;                       /* Más padding */
+    border-bottom: 1px solid rgba(255,255,255,0.15); /* Línea más sutil */
+    text-align: center;
+    background: rgba(255,255,255,0.05);       /* Fondo sutil para el logo */
+}
+
+/* Links de navegación más suaves */
+.sidebar .nav-link {
+    color: rgba(255,255,255,0.85);            /* Texto más legible */
+    padding: 14px 20px;                       /* Más padding */
+    margin: 4px 10px;                         /* Separación entre items */
+    border-radius: 8px;                       /* Esquinas redondeadas */
+    transition: all 0.3s ease;
+}
+
+.sidebar .nav-link:hover, .sidebar .nav-link.active {
+    background-color: rgba(255,255,255,0.12); /* Hover más sutil */
+    color: white;
+    transform: translateX(5px);               /* Efecto sutil al hover */
+}
+
+/* Main content con mejor espaciado */
+.main-content {
+    background-color: #f0f4f8;                /* Fondo más suave */
+    min-height: 100vh;
+    padding: 0 15px;                          /* Padding lateral */
+}
+
+/* Stats cards con colores más suaves */
+.stat-today .stat-icon { 
+    background: rgba(40, 167, 69, 0.15);      /* Verde más suave */
+    color: var(--success); 
+}
+.stat-upcoming .stat-icon { 
+    background: rgba(255, 193, 7, 0.15);      /* Amarillo más suave */
+    color: var(--warning); 
+}
+.stat-cancelled .stat-icon { 
+    background: rgba(220, 53, 69, 0.15);      /* Rojo más suave */
+    color: var(--danger); 
+}
+.stat-revenue .stat-icon { 
+    background: rgba(112, 193, 179, 0.15);    /* Acorde al nuevo accent */
+    color: var(--accent); 
+}
