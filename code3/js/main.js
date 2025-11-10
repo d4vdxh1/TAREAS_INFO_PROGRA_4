@@ -17,13 +17,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 alert('Por favor, complete todos los campos');
             }
         });
-    }
-    initializeMobileMenu();
+    }    
     // Inicializar tooltips de Bootstrap
     const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
     const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl);
     });
+    initializeMobileMenu();
 });
 
 // Funciones de utilidad
@@ -86,9 +86,9 @@ function validateRequiredFields(form) {
 
 
 // Manejo del menú hamburguesa para móviles
-document.addEventListener('DOMContentLoaded', function() {
+/*document.addEventListener('DOMContentLoaded', function() {
     initializeMobileMenu();
-});
+});*/
 
 function initializeMobileMenu() {
     const mobileToggle = document.getElementById('mobileMenuToggle');
