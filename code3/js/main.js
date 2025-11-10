@@ -129,11 +129,14 @@ function initializeMobileMenu() {
 }
 
 function createMobileMenuElements() {
-    // Crear botón hamburguesa
+    // Crear botón hamburguesa CON AMBOS ÍCONOS
     const toggleBtn = document.createElement('button');
     toggleBtn.id = 'mobileMenuToggle';
     toggleBtn.className = 'mobile-menu-toggle';
-    toggleBtn.innerHTML = '<i class="fas fa-bars"></i>';
+    toggleBtn.innerHTML = `
+        <i class="fas fa-bars"></i>
+        <i class="fas fa-times"></i>
+    `;
     
     // Crear overlay
     const overlay = document.createElement('div');
@@ -143,4 +146,3 @@ function createMobileMenuElements() {
     document.body.appendChild(toggleBtn);
     document.body.appendChild(overlay);
 }
-
