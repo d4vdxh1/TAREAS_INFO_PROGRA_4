@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    
+    initializeMobileMenu();
     // Inicializar tooltips de Bootstrap
     const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
     const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
@@ -86,9 +86,6 @@ function validateRequiredFields(form) {
 
 
 // Manejo del menú hamburguesa para móviles
-document.addEventListener('DOMContentLoaded', function() {
-    initializeMobileMenu();
-});
 
 function initializeMobileMenu() {
     const mobileToggle = document.getElementById('mobileMenuToggle');
