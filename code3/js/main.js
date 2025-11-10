@@ -18,13 +18,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    
+    initializeMobileMenu();
     // Inicializar tooltips de Bootstrap
     const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
     const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl);
     });
-    initializeMobileMenu();
 });
 
 // Funciones de utilidad
