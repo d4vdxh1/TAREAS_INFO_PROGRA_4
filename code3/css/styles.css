@@ -190,4 +190,8 @@
         padding: 8px 16px;
         font-size: 0.9em;
     }
+    /* Menú hamburguesa que cambia a X - Versión Simple */
+    .mobile-menu-toggle.active .fa-bars::before {
+        content: "\f00d"; /* Código de FontAwesome para X */
+    }
 }
