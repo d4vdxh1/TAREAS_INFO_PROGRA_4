@@ -83,3 +83,64 @@ function validateRequiredFields(form) {
     
     return isValid;
 }
+
+
+// Manejo del menú hamburguesa para móviles
+document.addEventListener('DOMContentLoaded', function() {
+    initializeMobileMenu();
+});
+
+function initializeMobileMenu() {
+    const mobileToggle = document.getElementById('mobileMenuToggle');
+    const sidebar = document.querySelector('.sidebar');
+    const mobileOverlay = document.querySelector('.mobile-overlay');
+    
+    // Crear elementos del menú móvil si no existen
+    if (!mobileToggle) {
+        createMobileMenuElements();
+    }
+    
+    // Configurar evento del botón hamburguesa
+    const toggleBtn = document.getElementById('mobileMenuToggle');
+    if (toggleBtn) {
+        toggleBtn.addEventListener('click', function() {
+            sidebar.classList.toggle('mobile-open');
+            mobileOverlay.classList.toggle('active');
+        });
+    }
+    
+    // Cerrar menú al hacer clic en el overlay
+    if (mobileOverlay) {
+        mobileOverlay.addEventListener('click', function() {
+            sidebar.classList.remove('mobile-open');
+            mobileOverlay.classList.remove('active');
+        });
+    }
+    
+    // Cerrar menú al hacer clic en un enlace (en móviles)
+    const navLinks = document.querySelectorAll('.sidebar .nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                sidebar.classList.remove('mobile-open');
+                mobileOverlay.classList.remove('active');
+            }
+        });
+    });
+}
+
+function createMobileMenuElements() {
+    // Crear botón hamburguesa
+    const toggleBtn = document.createElement('button');
+    toggleBtn.id = 'mobileMenuToggle';
+    toggleBtn.className = 'mobile-menu-toggle';
+    toggleBtn.innerHTML = '<i class="fas fa-bars"></i>';
+    
+    // Crear overlay
+    const overlay = document.createElement('div');
+    overlay.className = 'mobile-overlay';
+    
+    // Insertar elementos en el DOM
+    document.body.appendChild(toggleBtn);
+    document.body.appendChild(overlay);
+}
