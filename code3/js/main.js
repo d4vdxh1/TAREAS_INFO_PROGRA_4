@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl);
     });
-    initializeMobileMenu();
 });
 
 // Funciones de utilidad
@@ -107,7 +106,6 @@ function initializeMobileMenu() {
         toggleBtn.addEventListener('click', function() {
             sidebar.classList.toggle('mobile-open');
             mobileOverlay.classList.toggle('active');
-            toggleBtn.classList.toggle('active'); // ← AGREGAR ESTA LÍNEA
         });
     }
     
@@ -116,7 +114,6 @@ function initializeMobileMenu() {
         mobileOverlay.addEventListener('click', function() {
             sidebar.classList.remove('mobile-open');
             mobileOverlay.classList.remove('active');
-            toggleBtn.classList.remove('active'); // ← AGREGAR ESTA LÍNEA
         });
     }
     
@@ -127,7 +124,6 @@ function initializeMobileMenu() {
             if (window.innerWidth <= 768) {
                 sidebar.classList.remove('mobile-open');
                 mobileOverlay.classList.remove('active');
-                toggleBtn.classList.remove('active'); // ← AGREGAR ESTA LÍNEA
             }
         });
     });
