@@ -75,3 +75,119 @@
     background: rgba(112, 193, 179, 0.15);    /* Acorde al nuevo accent */
     color: var(--accent); 
 }
+
+/* Sidebar para desktop */
+.sidebar {
+    background: linear-gradient(180deg, #7d9bc0 0%, #6a87ad 100%);
+    color: white;
+    min-height: 100vh;
+    box-shadow: 2px 0 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+
+
+
+/* Menú hamburguesa - Solo visible en móviles */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--primary);
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1001;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Overlay para móviles */
+.mobile-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .container-fluid {
+        position: relative;
+    }
+    
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -280px;
+        width: 280px;
+        height: 100vh;
+        z-index: 1000;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+    
+    .sidebar.mobile-open {
+        transform: translateX(0);
+        left: 0;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    .mobile-overlay.active {
+        display: block;
+    }
+    
+    .main-content {
+        margin-left: 0;
+        padding: 0 10px;
+    }
+    
+    .header {
+        margin: 60px 10px 0 10px;
+        padding: 15px 20px;
+    }
+    
+    /* Ajustar el grid para móviles */
+    .col-md-2, .col-md-10 {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+}
+
+/* Asegurar que el contenido sea responsive */
+@media (max-width: 576px) {
+    .stats-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .stat-card {
+        padding: 20px;
+    }
+    
+    .dashboard-content {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .table-responsive {
+        font-size: 0.85em;
+    }
+    
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}
